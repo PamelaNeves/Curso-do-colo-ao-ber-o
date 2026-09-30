@@ -205,6 +205,15 @@
             background: var(--white);
         }
 
+        /* Alerta de erro de validação */
+        .error-msg {
+            color: #d9534f;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+            font-weight: 500;
+        }
+
         /* Estilo para vídeos em passos específicos */
         .step-video-box {
             width: 240px;
@@ -494,26 +503,30 @@
             </div>
         </div>
 
-        <!-- PASSO 12: Formulário de Captação (Nome, E-mail e WhatsApp) -->
+        <!-- PASSO 12: Formulário de Captação com Validação de WhatsApp -->
         <div class="step-content" id="step12">
             <h1>O seu plano personalizado está pronto! 🎯</h1>
             <img src="oferta-berco.jpg" alt="Aulas" class="step-image">
             <p>Para liberarmos o seu diagnóstico completo e a condição especial de acesso, preencha abaixo os seus dados:</p>
             
-            <form onsubmit="event.preventDefault(); goToStep(13, 90);">
+            <form id="leadForm" onsubmit="enviarLeadParaWeb3Forms(event)">
+                <input type="hidden" name="access_key" value="f1f33e3c-240f-41e8-90ae-79a78f98bbaa">
+                <input type="hidden" name="subject" value="Novo Lead Cadastrado - Do Colo ao Berço!">
+                
                 <div class="form-group">
                     <label for="nomeMae">O seu Nome:</label>
-                    <input type="text" id="nomeMae" class="form-input" placeholder="Ex: Mariana Silva" required>
+                    <input type="text" id="nomeMae" name="Nome" class="form-input" placeholder="Ex: Mariana Silva" required>
                 </div>
                 <div class="form-group">
                     <label for="emailMae">O seu E-mail:</label>
-                    <input type="email" id="emailMae" class="form-input" placeholder="seu-melhor-email@exemplo.com" required>
+                    <input type="email" id="emailMae" name="Email" class="form-input" placeholder="seu-melhor-email@exemplo.com" required>
                 </div>
                 <div class="form-group">
                     <label for="whatsappMae">O seu WhatsApp (com DDD):</label>
-                    <input type="tel" id="whatsappMae" class="form-input" placeholder="(00) 00000-0000" required>
+                    <input type="tel" id="whatsappMae" name="WhatsApp" class="form-input" placeholder="(32) 99139-6972" required>
+                    <div id="erroWhatsapp" class="error-msg">Por favor, insira um número de WhatsApp válido com DDD.</div>
                 </div>
-                <button type="submit" class="btn-continue">VER MEU DIAGNÓSTICO E OFERTA &rarr;</button>
+                <button type="submit" id="btnEnviar" class="btn-continue">VER MEU DIAGNÓSTICO E OFERTA &rarr;</button>
             </form>
         </div>
 
@@ -628,6 +641,50 @@
                     fbq('track', 'Lead');
                 }
             }
+        }
+
+        // Função para validar o telefone e enviar o lead de forma invisível
+        function enviarLeadParaWeb3Forms(event) {
+            event.preventDefault();
+            
+            const inputWhatsapp = document.getElementById('whatsappMae');
+            const erroWhatsapp = document.getElementById('erroWhatsapp');
+            const numerosApenas = inputWhatsapp.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+            // Validação rigorosa:
+            // 1. Deve ter entre 10 e 11 dígitos (DDD + Número)
+            // 2. Não pode ser uma sequência repetida (ex: 11111111111)
+            const isSequenciaRepetida = /^(\d)\1+$/.test(numerosApenas);
+            
+            if (numerosApenas.length < 10 || numerosApenas.length > 11 || isSequenciaRepetida) {
+                erroWhatsapp.style.display = 'block';
+                inputWhatsapp.style.borderColor = '#d9534f';
+                inputWhatsapp.focus();
+                return;
+            } else {
+                erroWhatsapp.style.display = 'none';
+                inputWhatsapp.style.borderColor = 'var(--border-color)';
+            }
+
+            const form = document.getElementById('leadForm');
+            const formData = new FormData(form);
+            const botao = document.getElementById('btnEnviar');
+            
+            botao.innerText = "A carregar diagnóstico...";
+            botao.disabled = true;
+
+            // Envia para o Web3Forms em segundo plano
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                goToStep(13, 90);
+            })
+            .catch(error => {
+                goToStep(13, 90);
+            });
         }
     </script>
 </body>
