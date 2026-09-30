@@ -179,7 +179,7 @@
             display: block;
         }
 
-        /* Caixas de Destaque */
+        /* Caixas de Destaque e Módulos */
         .checklist-box {
             background: var(--purple-light);
             padding: 20px;
@@ -202,7 +202,7 @@
         }
 
         .checklist-box li {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -300,16 +300,16 @@
             <h1>Se o seu bebê só dorme no colo ou no peito e você está exausta, conquiste noites de sono reais</h1>
             <img src="hero-paula-bebe.jpg" alt="Paula com bebê" class="step-image">
             <p>Se você já tentou de tudo, carrega o corpo pesado de cansaço e passa as madrugadas em claro, saiba que a culpa não é sua. Descubra um caminho acolhedor para voltar a descansar.</p>
-            <button class="btn-continue" onclick="goToStep(2, 10)">CONTINUAR &rarr;</button>
+            <button class="btn-continue" onclick="goToStep(2, 9)">CONTINUAR &rarr;</button>
         </div>
 
         <!-- PASSO 2 -->
         <div class="step-content" id="step2">
             <h1>Prazer, eu sou a Paula Maia ❤️</h1>
             <img src="paula-familia.jpg" alt="Paula Maia com sua família" class="step-image">
-            <p>Sou especialista em sono infantil e mãe de três filhos. Há pouco tempo, eu também vivia o desespero de um bebé que acordava a toda a hora e a exaustão de passar noites em claro.</p>
-            <p>Criei o método <strong>Durma + Sem Choro!</strong> para provar que é possível ter noites tranquilas sem precisar de deixar o bebé a chorar sozinho.</p>
-            <button class="btn-continue" onclick="goToStep(3, 20)">CONTINUAR &rarr;</button>
+            <p>Sou especialista em sono infantil e mãe de três filhos. Há pouco tempo, eu também vivia o desespero de um bebê que acordava a toda hora e a exaustão de passar noites em claro.</p>
+            <p>Criei o método <strong>Durma + Sem Choro!</strong> para provar que é possível ter noites tranquilas sem precisar de deixar o bebê chorando sozinho.</p>
+            <button class="btn-continue" onclick="goToStep(3, 18)">CONTINUAR &rarr;</button>
         </div>
 
         <!-- PASSO 3: Pergunta - Idade -->
@@ -317,10 +317,10 @@
             <h1>Qual é a idade aproximada do seu pequeno?</h1>
             <p>Isto ajuda a identificar a fase de desenvolvimento e as janelas de sono adequadas:</p>
             <div class="options-list">
-                <div class="option-card" onclick="goToStep(4, 30)">👶 De 0 a 3 meses (Recém-nascido)</div>
-                <div class="option-card" onclick="goToStep(4, 30)">👶 De 4 a 8 meses (Fase de saltos e regressões)</div>
-                <div class="option-card" onclick="goToStep(4, 30)">🧒 De 9 a 12 meses (Apego e energia intensa)</div>
-                <div class="option-card" onclick="goToStep(4, 30)">🧒 De 1 a 2 anos (Birras e despertares noturnos)</div>
+                <div class="option-card" onclick="goToStep(4, 27)">👶 De 0 a 3 meses (Recém-nascido)</div>
+                <div class="option-card" onclick="goToStep(4, 27)">👶 De 4 a 8 meses (Fase de saltos e regressões)</div>
+                <div class="option-card" onclick="goToStep(4, 27)">🧒 De 9 a 12 meses (Apego e energia intensa)</div>
+                <div class="option-card" onclick="goToStep(4, 27)">🧒 De 1 a 2 anos (Birras e despertares noturnos)</div>
             </div>
         </div>
 
@@ -329,10 +329,10 @@
             <h1>Como o seu bebê costuma adormecer?</h1>
             <p>(Este é o fator número um que afeta as madrugadas da família inteira...)</p>
             <div class="options-list">
-                <div class="option-card" onclick="goToStep(5, 40)">🛑 Apenas no colo ou a ser embalado</div>
-                <div class="option-card" onclick="goToStep(5, 40)">🛑 Mamando no peito ou na mamadeira</div>
-                <div class="option-card" onclick="goToStep(5, 40)">⚠️ No berço, mas acorda assim que o tiramos de lá</div>
-                <div class="option-card" onclick="goToStep(5, 40)">✅ Adormece sozinho com facilidade</div>
+                <div class="option-card" onclick="goToStep(5, 36)">🛑 Apenas no colo ou balançando</div>
+                <div class="option-card" onclick="goToStep(5, 36)">🛑 Mamando no peito ou na mamadeira</div>
+                <div class="option-card" onclick="goToStep(5, 36)">⚠️ No berço, mas acorda assim que sai do lugar</div>
+                <div class="option-card" onclick="goToStep(5, 36)">✅ Adormece sozinho com facilidade</div>
             </div>
         </div>
 
@@ -340,59 +340,71 @@
         <div class="step-content" id="step5">
             <h1>Por que o sono de qualidade é vital para o desenvolvimento do seu bebê?</h1>
             <img src="missao-bebe.jpg" alt="Bebê dormindo" class="step-image">
-            <p>Enquanto o seu bebé dorme profundamente, o cérebro dele processa tudo o que aprendeu, o sistema imunológico fortalece-se e o hormónio do crescimento atua com força total.</p>
-            <p>Bebés que dormem bem choram menos, ganham mais disposição para explorar o mundo e desenvolvem-se com muita saúde emocional.</p>
-            <button class="btn-continue" onclick="goToStep(6, 50)">CONTINUAR &rarr;</button>
+            <p>Enquanto o seu bebê dorme profundamente, o cérebro dele processa tudo o que aprendeu, o sistema imunológico se fortalece e o hormônio do crescimento atua com força total.</p>
+            <p>Bebês que dormem bem choram menos, ganham mais disposição para explorar o mundo e se desenvolvem com muita saúde emocional.</p>
+            <button class="btn-continue" onclick="goToStep(6, 45)">CONTINUAR &rarr;</button>
         </div>
 
-        <!-- PASSO 6: História Real -->
+        <!-- PASSO 6: Nova Pergunta - Tirar dúvidas com a especialista -->
         <div class="step-content" id="step6">
+            <h1>Você se sentiria mais segura e confiante se pudesse tirar suas dúvidas direto com a especialista?</h1>
+            <p>Ter um suporte humano para guiar os seus passos faz toda a diferença para não se sentir sozinha no processo:</p>
+            <div class="options-list">
+                <div class="option-card" onclick="goToStep(7, 54)">✨ Sim! É exatamente o que preciso para ter segurança.</div>
+                <div class="option-card" onclick="goToStep(7, 54)">🤝 Com certeza, ajudaria muito a não errar.</div>
+            </div>
+        </div>
+
+        <!-- PASSO 7: História Real -->
+        <div class="step-content" id="step7">
             <h1>A história da Mariana e do pequeno Lucas</h1>
             <img src="berco-quarto.jpg" alt="Quarto de bebê" class="step-image">
             <p>"Eu já não sabia o que era dormir mais de duas horas seguidas. O Lucas só pegava no sono no meu colo e chorava sempre que eu tentava passá-lo para o berço.</p>
             <p>Quando conheci o método da Paula, percebi que pequenas mudanças mudavam tudo. Na primeira semana, ele já dormia no berço e eu voltei a ter paz!"</p>
-            <button class="btn-continue" onclick="goToStep(7, 60)">CONTINUAR &rarr;</button>
+            <button class="btn-continue" onclick="goToStep(8, 63)">CONTINUAR &rarr;</button>
         </div>
 
-        <!-- PASSO 7: Vídeo Depoimento 1 -->
-        <div class="step-content" id="step7">
+        <!-- PASSO 8: Vídeo Depoimento 1 -->
+        <div class="step-content" id="step8">
             <h1>Veja o depoimento real da Ana Paula</h1>
             <div class="step-video-box">
                 <div class="step-video-screen">
                     <video controls preload="metadata" poster="miniatura1.jpg">
                         <source src="Depoimento1.mp4" type="video/mp4">
-                        O seu browser não suporta vídeo.
+                        O seu navegador não suporta vídeo.
                     </video>
                 </div>
             </div>
             <p style="text-align: center; font-size: 0.9rem; color: var(--purple-hover);">Mãe da Manu e do Henrique recuperou as noites de sono.</p>
-            <button class="btn-continue" onclick="goToStep(8, 75)">CONTINUAR &rarr;</button>
+            <button class="btn-continue" onclick="goToStep(9, 75)">CONTINUAR &rarr;</button>
         </div>
 
-        <!-- PASSO 8: O que vai receber -->
-        <div class="step-content" id="step8">
+        <!-- PASSO 9: Preparação para a Oferta -->
+        <div class="step-content" id="step9">
             <h1>O seu plano personalizado está pronto! 🎯</h1>
             <img src="oferta-berco.jpg" alt="Aulas" class="step-image">
-            <div class="checklist-box">
-                <h3>✅ O QUE VOCÊ VAI RECEBER:</h3>
-                <ul>
-                    <li>✔️ <strong>Acesso imediato</strong> a todas as aulas gravadas do minicurso.</li>
-                    <li>✔️ <strong>Módulo Prático:</strong> Como retirar a associação de colo/peito sem choro.</li>
-                    <li>✔️ <strong>Tabela Oficial</strong> de Janelas de Sono por idade.</li>
-                    <li>✔️ <strong>Guia de Sonecas</strong> e rotina adaptada à sua realidade.</li>
-                    <li>✔️ <strong>Acesso Vitalício</strong> para rever sempre que precisar.</li>
-                </ul>
-            </div>
-            <button class="btn-continue" onclick="goToStep(9, 88)">VER MEU DIAGNÓSTICO E OFERTA &rarr;</button>
+            <p>Com base em tudo o que você passou e no perfil do seu bebê, estruturamos o caminho exato para você resgatar o seu descanso sem precisar de deixar o seu filho chorando sozinho.</p>
+            <button class="btn-continue" onclick="goToStep(10, 88)">VER MEU DIAGNÓSTICO E OFERTA &rarr;</button>
         </div>
 
-        <!-- PASSO 9: Página Final Robusta (Reforço da Dor, Solução, Mais Depoimentos, Garantia e FAQ) -->
-        <div class="step-content" id="step9">
+        <!-- PASSO 10: Página Final Completa (Conteúdos, Aulas, Bônus, Grupo do WhatsApp, Garantia e FAQ) -->
+        <div class="step-content" id="step10">
             <h1>Chega de Madrugadas em Claro e Exaustão Extrema</h1>
             
-            <p>Nós sabemos exatamente o peso que você carrega nos ombros. O corpo dormente de cansaço, a irritação que surge por falta de descanso, a culpa por perder a paciência e a sensação de que você está a falhar como mãe. <strong>A culpa não é sua!</strong> Sem o método certo, tentar adormecer um bebé viciado em colo e peito é uma missão desgastante.</p>
+            <p>Nós sabemos exatamente o peso que você carrega nos ombros. O corpo dormente de cansaço, a irritação por falta de descanso, a culpa por perder a paciência e a sensação de falhar como mãe. <strong>A culpa não é sua!</strong> Sem o método certo, tentar adormecer um bebê viciado em colo e peito é esgotante.</p>
             
-            <p>A solução definitiva está em ensinar o seu pequeno a adormecer com autonomia e segurança emocional, através de um passo a passo testado, humano e sem choro prolongado.</p>
+            <div class="checklist-box">
+                <h3>📚 O QUE VOCÊ VAI RECEBER NO MINICURSO:</h3>
+                <ul>
+                    <li>✔️ <strong>Aulas 01 e 02:</strong> Entendendo o sono do bebê + Preparando o ambiente e a rotina ideal.</li>
+                    <li>✔️ <strong>Aulas 03 e 04:</strong> O Método Durma + sem choro passo a passo (tirando a associação de mamar/colo e ensinando a dormir no berço).</li>
+                    <li>✔️ <strong>Aulas 05 e 06:</strong> Consolidando hábitos, lidando com retrocessos e colocando o bebê no berço do jeito certo.</li>
+                    <li>🎁 <strong>BÔNUS 1:</strong> Tabela Oficial de Janela de Sono por idade.</li>
+                    <li>🎁 <strong>BÔNUS 2:</strong> Guia prático de Quantidade de Sonecas.</li>
+                    <li>💬 <strong>BÔNUS 3: Acesso ao Grupo de Apoio no WhatsApp</strong> para tirar dúvidas e caminhar junto com outras mães e suporte especializado!</li>
+                    <li>⚡ <strong>Acesso Vitalício</strong> à plataforma para assistir quando e quantas vezes quiser.</li>
+                </ul>
+            </div>
 
             <div style="background: var(--purple-light); padding: 18px; border-radius: 14px; border: 1px dashed var(--purple-accent); margin: 20px 0; text-align: center;">
                 <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: var(--purple-hover);">Condição Especial de Lançamento</span>
@@ -409,49 +421,49 @@
                 <div class="step-video-screen">
                     <video controls preload="metadata" poster="miniatura2.jpg">
                         <source src="Depoimento2.mp4" type="video/mp4">
-                        O seu browser não suporta vídeo.
+                        O seu navegador não suporta vídeo.
                     </video>
                 </div>
             </div>
             <p style="text-align: center; font-size: 0.85rem; color: var(--purple-hover); margin-bottom: 20px;">Depoimento real de mãe que aplicou o método da Paula.</p>
 
             <div class="testimonial-mini-card">
-                <p>"Passar as madrugadas em claro a embalar já era rotina aqui em casa. As aulas são super diretas e práticas, sem enrolação para quem já está exausta."</p>
+                <p>"Passar as madrugadas em claro embalando já era rotina aqui em casa. As aulas são super diretas e práticas, sem enrolação para quem já está exausta."</p>
                 <span>— Camila Silveira (Mãe da Sofia, 1 ano e 2 meses)</span>
             </div>
 
             <div class="testimonial-mini-card">
-                <p>"O melhor investimento que fiz por mim e pela minha família. Voltei a dormir e sinto-me muito mais paciente durante o dia com o meu pequeno."</p>
+                <p>"O melhor investimento que fiz por mim e pela minha família. Voltei a dormir e me sinto muito mais paciente durante o dia com o meu pequeno."</p>
                 <span>— Juliana Ribeiro (Mãe do Pedro, 6 meses)</span>
             </div>
 
             <!-- GARANTIA -->
             <div style="background: #faf5fc; padding: 16px; border-radius: 14px; border: 1px solid var(--border-color); margin: 25px 0; text-align: center;">
                 <h3 style="font-size: 1rem; color: var(--title-color); margin-bottom: 6px;">🔒 Garantia Incondicional de 7 Dias</h3>
-                <p style="font-size: 0.85rem; margin: 0; text-align: center;">Teste o método sem compromisso. Se não vir diferença na rotina da sua casa, devolvemos 100% do seu dinheiro sem burocracia.</p>
+                <p style="font-size: 0.85rem; margin: 0; text-align: center;">Teste o método sem compromisso. Se não ver diferença na rotina da sua casa, devolvemos 100% do seu dinheiro sem burocracia.</p>
             </div>
 
             <!-- FAQ COMPLETA -->
             <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--title-color);">Dúvidas Frequentes</h3>
 
             <div class="faq-item">
-                <strong>Como recebo o acesso ao curso?</strong>
-                <p>O acesso é 100% imediato após a aprovação do pagamento. Receberá um e-mail com o seu login e senha.</p>
+                <strong>Como recebo o acesso ao curso e ao grupo do WhatsApp?</strong>
+                <p>O acesso às aulas é 100% imediato após a aprovação do pagamento via e-mail da Kiwify. O link para entrar no grupo do WhatsApp estará disponível logo dentro da plataforma de aulas.</p>
             </div>
 
             <div class="faq-item">
                 <strong>O curso serve para qual idade?</strong>
-                <p>Ideal para bebés de 0 a 2 anos que enfrentam dificuldades com o sono e despertares frequentes.</p>
+                <p>Ideal para bebês de 0 a 2 anos que enfrentam dificuldades com o sono e despertares frequentes.</p>
             </div>
 
             <div class="faq-item">
-                <strong>O método deixa o bebé a chorar sozinho?</strong>
-                <p>De forma alguma! É um método totalmente acolhedor baseado na neurociência, respeitando o vínculo entre mãe e bebé.</p>
+                <strong>O método deixa o bebê chorando sozinho?</strong>
+                <p>De forma alguma! É um método totalmente acolhedor baseado na neurociência, respeitando o vínculo entre mãe e bebê.</p>
             </div>
 
             <div class="faq-item">
                 <strong>Por quanto tempo terei acesso?</strong>
-                <p>O acesso é vitalício. Poderá ver e rever as aulas sempre que precisar, acompanhando as fases de crescimento do seu bebé.</p>
+                <p>O acesso é vitalício. Você poderá ver e rever as aulas sempre que precisar.</p>
             </div>
 
             <a href="https://pay.kiwify.com.br/GRBixhq" target="_blank" class="btn-continue" style="background: linear-gradient(135deg, #7562dc 0%, #513fc4 100%); margin-top: 25px;">QUERO GARANTIR MEU ACESSO COM DESCONTO</a>
