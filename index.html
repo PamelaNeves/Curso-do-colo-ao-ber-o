@@ -422,7 +422,7 @@
             <div class="options-list">
                 <div class="option-card" onclick="goToStep(5, 28)">🛑 Apenas no colo ou balançando</div>
                 <div class="option-card" onclick="goToStep(5, 28)">🛑 Mamando no peito ou na mamadeira</div>
-                <div class="option-card" onclick="goToStep(5, 28)">⚠️ No berço, mas acorda assim que sai do lugar</div>
+                <div class="option-card" onclick="goToStep(5, 28)">⚠️️ No berço, mas acorda assim que sai do lugar</div>
                 <div class="option-card" onclick="goToStep(5, 28)">✅ Adormece sozinho com facilidade</div>
             </div>
         </div>
@@ -432,7 +432,7 @@
             <h1>A história da Mariana e do pequeno Lucas</h1>
             <img src="berco-quarto.jpg" alt="Quarto de bebê" class="step-image">
             <p>"Eu já não sabia o que era dormir mais de duas horas seguidas. O Lucas só pegava no sono no meu colo e chorava sempre que eu tentava passá-lo para o berço.</p>
-            <p>Когда conheci o método da Paula, percebi que pequenas mudanças mudavam tudo. Na primeira semana, ele já dormia no berço e eu voltei a ter paz!"</p>
+            <p>Quando conheci o método da Paula, percebi que pequenas mudanças mudavam tudo. Na primeira semana, ele já dormia no berço e eu voltei a ter paz!"</p>
             <button class="btn-continue" onclick="goToStep(6, 35)">CONTINUAR &rarr;</button>
         </div>
 
@@ -629,6 +629,12 @@
 
     <script>
         function goToStep(stepNum, progressPercentage) {
+            // Pausa e reinicia todos os vídeos da página ao mudar de passo
+            document.querySelectorAll('video').forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
             document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
             document.getElementById('step' + stepNum).classList.add('active');
             document.getElementById('funnelProgress').style.width = progressPercentage + '%';
@@ -651,10 +657,6 @@
             const erroWhatsapp = document.getElementById('erroWhatsapp');
             const numerosApenas = inputWhatsapp.value.replace(/\D/g, ''); // Remove tudo que não for número
 
-            // Regras de bloqueio rigorosas:
-            // 1. Menos de 10 dígitos ou mais de 11 dígitos
-            // 2. Todos os números iguais (ex: 9999999999, 1111111111)
-            // 3. Sequências óbvias de testes (ex: 1234567890, 0000000000)
             const todosIguais = /^(\d)\1+$/.test(numerosApenas);
             const sequenciaObvia = /^(12345678|01234567|98765432)/.test(numerosApenas);
 
@@ -662,7 +664,7 @@
                 erroWhatsapp.style.display = 'block';
                 inputWhatsapp.style.borderColor = '#d9534f';
                 inputWhatsapp.focus();
-                return; // Bloqueia totalmente o envio e não gasta crédito no Web3Forms
+                return;
             } else {
                 erroWhatsapp.style.display = 'none';
                 inputWhatsapp.style.borderColor = 'var(--border-color)';
@@ -675,7 +677,6 @@
             botao.innerText = "A carregar diagnóstico...";
             botao.disabled = true;
 
-            // Só envia para o Web3Forms se passou em todas as barreiras de segurança
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
