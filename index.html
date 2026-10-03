@@ -90,7 +90,7 @@
         .progress-bar-fill {
             height: 100%;
             background: var(--purple-hover);
-            width: 20%;
+            width: 25%;
             transition: width 0.4s ease;
         }
 
@@ -198,6 +198,29 @@
             font-size: 0.9rem;
             margin-bottom: 10px;
             font-weight: 500;
+        }
+
+        /* Estilo ajustado para a Apresentação da Paula (Sem cortar a cabeça) */
+        .paula-bio-box {
+            background: linear-gradient(135deg, #f9f5fc 0%, #f1ebfa 100%);
+            border: 2px solid var(--purple-accent);
+            border-radius: 20px;
+            padding: 25px 20px;
+            margin: 35px 0 25px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(139, 121, 232, 0.15);
+        }
+
+        .paula-bio-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top; /* Garante o foco no topo (rostos) */
+            border: 4px solid var(--white);
+            box-shadow: 0 6px 15px rgba(139, 121, 232, 0.25);
+            margin: 0 auto 15px auto;
+            display: block;
         }
 
         /* Estilo para vídeos de depoimento */
@@ -341,45 +364,36 @@
         <div class="step-content active" id="step1">
             <h1>Seu bebê só dorme no colo ou no peito e você já não aguenta mais de cansaço?</h1>
             <img src="hero-paula-bebe.jpg" alt="Paula com bebê" class="step-image">
-            <p>Se você passa o dia inteiro exausta e já sabe que a próxima madrugada vai ser difícil, saiba que a culpa <strong>não é sua</strong>. Existe um jeito mais leve e carinhoso para o seu bebê dormir bem.</p>
-            <button class="btn-continue" onclick="goToStep(2, 40)">QUERO DESCOBRIR COMO &rarr;</button>
+            <p>Se você passa o dia inteiro exausta e já sabe que a próxima madrugada vai ser difícil, saiba que a culpa <strong>não é sua</strong>. Vamos fazer um diagnóstico rápido para descobrir como resolver isso de forma leve e carinhosa.</p>
+            <button class="btn-continue" onclick="goToStep(2, 50)">INICIAR DIAGNÓSTICO RÁPIDO &rarr;</button>
         </div>
 
         <!-- PASSO 2 -->
         <div class="step-content" id="step2">
-            <h1>Prazer, eu sou a Paula Maia ❤️</h1>
-            <img src="paula-familia.jpg" alt="Paula Maia com sua família" class="step-image">
-            <p>Sou especialista em sono infantil e mãe de três filhos. Eu já passei pelas mesmas noites em claro e pelo mesmo cansaço que você sente hoje.</p>
-            <p>Criei o método <strong>Durma + Sem Choro!</strong> para te mostrar que é possível ter noites tranquilas sem precisar deixar o seu bebê chorando sozinho.</p>
-            <button class="btn-continue" onclick="goToStep(3, 60)">INICIAR DIAGNÓSTICO RÁPIDO &rarr;</button>
+            <h1>Qual é a idade do seu pequeno?</h1>
+            <p>Isso nos ajuda a entender a fase de desenvolvimento e o padrão de sono dele:</p>
+            <div class="options-list">
+                <div class="option-card" onclick="goToStep(3, 75)">👶 De 0 a 3 meses (Recém-nascido)</div>
+                <div class="option-card" onclick="goToStep(3, 75)">👶 De 4 a 8 meses (Fase de saltos e desenvolvimento)</div>
+                <div class="option-card" onclick="goToStep(3, 75)">🧒 De 9 a 12 meses (Apego e despertares)</div>
+                <div class="option-card" onclick="goToStep(3, 75)">🧒 De 1 a 2 anos (Birras e noites difíceis)</div>
+            </div>
         </div>
 
         <!-- PASSO 3 -->
         <div class="step-content" id="step3">
-            <h1>Qual é a idade do seu pequeno?</h1>
-            <p>Isso nos ajuda a entender a fase de desenvolvimento e o sono dele:</p>
-            <div class="options-list">
-                <div class="option-card" onclick="goToStep(4, 80)">👶 De 0 a 3 meses (Recém-nascido)</div>
-                <div class="option-card" onclick="goToStep(4, 80)">👶 De 4 a 8 meses (Fase de saltos e desenvolvimento)</div>
-                <div class="option-card" onclick="goToStep(4, 80)">🧒 De 9 a 12 meses (Apego e despertares)</div>
-                <div class="option-card" onclick="goToStep(4, 80)">🧒 De 1 a 2 anos (Birras e noites difíceis)</div>
-            </div>
-        </div>
-
-        <!-- PASSO 4 -->
-        <div class="step-content" id="step4">
             <h1>Como o seu bebê costuma pegar no sono?</h1>
             <p>(Esse é o detalhe que mais interfere nas madrugadas da família...)</p>
             <div class="options-list">
-                <div class="option-card" onclick="goToStep(5, 100)">🛑 Apenas no colo ou balançando</div>
-                <div class="option-card" onclick="goToStep(5, 100)">🛑 Mamando no peito ou na mamadeira</div>
-                <div class="option-card" onclick="goToStep(5, 100)">⚠ No berço, mas acorda assim que sai do braço</div>
-                <div class="option-card" onclick="goToStep(5, 100)">✅ Adormece sozinho com facilidade</div>
+                <div class="option-card" onclick="goToStep(4, 100)">🛑 Apenas no colo ou balançando</div>
+                <div class="option-card" onclick="goToStep(4, 100)">🛑 Mamando no peito ou na mamadeira</div>
+                <div class="option-card" onclick="goToStep(4, 100)">⚠ No berço, mas acorda assim que sai do braço</div>
+                <div class="option-card" onclick="goToStep(4, 100)">✅ Adormece sozinho com facilidade</div>
             </div>
         </div>
 
-        <!-- PASSO 5: Página de Vendas Final com Prova Social e FAQ Expandido -->
-        <div class="step-content" id="step5">
+        <!-- PASSO 4: Página de Vendas Final -->
+        <div class="step-content" id="step4">
             <div style="background: var(--purple-light); padding: 12px 15px; border-radius: 12px; border: 2px solid var(--purple-accent); margin-bottom: 20px; text-align: center;">
                 <span style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--purple-hover); display: block; margin-bottom: 2px;">Diagnóstico Concluído</span>
                 <h2 style="font-size: 1.3rem; color: var(--title-color); margin: 0;">Do Colo ao Berço &bull; Método Durma + sem Choro!</h2>
@@ -414,6 +428,16 @@
             <a href="https://wa.me/5532991396972?text=Olá%20Paula,%20estou%20no%20site%20e%20tenho%20alguma%20dúvida%20sobre%20o%20curso%20Do%20Colo%20ao%20Berço." target="_blank" class="btn-whatsapp">
                 💬 Ficou com dúvida? Fale comigo no WhatsApp
             </a>
+
+            <!-- APRESENTAÇÃO DA PAULA (Com imagem corrigida para não cortar) -->
+            <div class="paula-bio-box">
+                <img src="paula-familia.jpg" alt="Paula Maia" class="paula-bio-img">
+                <h3 style="font-size: 1.25rem; color: var(--title-color); margin-bottom: 8px;">Quem vai te guiar: Paula Maia</h3>
+                <p style="font-size: 0.9rem; text-align: center; margin-bottom: 12px; font-weight: 500; color: var(--purple-hover);">Especialista em Sono Infantil &bull; Mãe de 3</p>
+                <p style="font-size: 0.9rem; text-align: center; line-height: 1.6; margin: 0;">
+                    "Eu já vivi na pele o desespero de passar noites em claro, com o corpo exausto e sem saber o que fazer para o meu bebé dormir. Foi por isso que me especializei e criei o método <strong>Durma + Sem Choro!</strong>. Quero pegar na sua mão para te mostrar que é possível ter noites tranquilas, respeitando o vínculo com o seu filho e sem precisar deixá-lo a chorar sozinho."
+                </p>
+            </div>
 
             <!-- PROVA SOCIAL: VÍDEOS E DEPOIMENTOS ESCRITOS -->
             <h3 style="font-size: 1.15rem; margin: 35px 0 15px 0; color: var(--title-color);">Histórias Reais de Mães que Conquistaram o Sono:</h3>
@@ -454,7 +478,7 @@
                 <p style="font-size: 0.85rem; margin: 0; text-align: center;">Teste o método sem compromisso. Se não ver diferença na rotina da sua casa, devolvemos 100% do seu dinheiro.</p>
             </div>
 
-            <!-- FAQ EXPANDIDO -->
+            <!-- FAQ COMPLETO -->
             <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--title-color);">Dúvidas Frequentes</h3>
 
             <div class="faq-item">
@@ -514,7 +538,7 @@
 
             if (typeof fbq === 'function') {
                 fbq('trackCustom', 'Passo_' + stepNum);
-                if (stepNum === 5) {
+                if (stepNum === 4) {
                     fbq('track', 'Lead');
                 }
             }
