@@ -6,6 +6,7 @@
     <title>Paula Maia | Especialista em Sono Infantil</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
+    
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -89,7 +90,7 @@
         .progress-bar-fill {
             height: 100%;
             background: var(--purple-hover);
-            width: 6%;
+            width: 20%;
             transition: width 0.4s ease;
         }
 
@@ -129,10 +130,9 @@
             text-align: left;
         }
 
-        /* Imagens nos Passos */
         .step-image {
             width: 100%;
-            max-height: 300px;
+            max-height: 280px;
             object-fit: contain;
             background-color: #fcf8fd;
             border-radius: 16px;
@@ -143,7 +143,6 @@
             margin-right: auto;
         }
 
-        /* Opções de Resposta */
         .options-list {
             display: flex;
             flex-direction: column;
@@ -174,73 +173,6 @@
             transform: translateY(-2px);
         }
 
-        /* Campos do Formulário de Captura */
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--title-color);
-            margin-bottom: 5px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            transition: border-color 0.3s;
-            background: #faf5fc;
-        }
-
-        .form-input:focus {
-            border-color: var(--purple-accent);
-            background: var(--white);
-        }
-
-        /* Alerta de erro de validação */
-        .error-msg {
-            color: #d9534f;
-            font-size: 0.85rem;
-            margin-top: 5px;
-            display: none;
-            font-weight: 500;
-        }
-
-        /* Estilo para vídeos em passos específicos */
-        .step-video-box {
-            width: 240px;
-            margin: 0 auto 15px auto;
-            background: #2b2336;
-            border-radius: 30px;
-            padding: 12px;
-            box-shadow: 0 15px 30px rgba(139, 121, 232, 0.25);
-            border: 3px solid #9b89f5;
-        }
-
-        .step-video-screen {
-            width: 100%;
-            background: #000;
-            border-radius: 22px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .step-video-screen video {
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Caixas de Destaque e Módulos */
         .checklist-box {
             background: var(--purple-light);
             padding: 20px;
@@ -268,7 +200,32 @@
             font-weight: 500;
         }
 
-        /* Depoimentos Escritos na Página Final */
+        /* Estilo para vídeos de depoimento */
+        .step-video-box {
+            width: 240px;
+            margin: 0 auto 15px auto;
+            background: #2b2336;
+            border-radius: 30px;
+            padding: 12px;
+            box-shadow: 0 15px 30px rgba(139, 121, 232, 0.25);
+            border: 3px solid #9b89f5;
+        }
+
+        .step-video-screen {
+            width: 100%;
+            background: #000;
+            border-radius: 22px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .step-video-screen video {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
         .testimonial-mini-card {
             background: #faf5fc;
             padding: 15px;
@@ -291,7 +248,6 @@
             display: block;
         }
 
-        /* FAQ Card */
         .faq-item {
             background: #faf5fc;
             padding: 15px;
@@ -313,7 +269,6 @@
             margin: 0;
         }
 
-        /* Botão de Avançar Padrão */
         .btn-continue {
             background: linear-gradient(135deg, #9b89f5 0%, #7562dc 100%);
             color: var(--white);
@@ -339,7 +294,6 @@
             box-shadow: 0 12px 30px rgba(139, 121, 232, 0.8);
         }
 
-        /* Botão do WhatsApp */
         .btn-whatsapp {
             background: var(--whatsapp-color);
             color: var(--white);
@@ -385,172 +339,66 @@
 
         <!-- PASSO 1 -->
         <div class="step-content active" id="step1">
-            <h1>Se o seu bebê só dorme no colo ou no peito e você está exausta, conquiste noites de sono reais</h1>
+            <h1>Seu bebê só dorme no colo ou no peito e você já não aguenta mais de cansaço?</h1>
             <img src="hero-paula-bebe.jpg" alt="Paula com bebê" class="step-image">
-            <p>Se você já tentou de tudo, carrega o corpo pesado de cansaço e passa as madrugadas em claro, saiba que a culpa não é sua. Descubra um caminho acolhedor para voltar a descansar.</p>
-            <button class="btn-continue" onclick="goToStep(2, 7)">CONTINUAR &rarr;</button>
+            <p>Se você passa o dia inteiro exausta e já sabe que a próxima madrugada vai ser difícil, saiba que a culpa <strong>não é sua</strong>. Existe um jeito mais leve e carinhoso para o seu bebê dormir bem.</p>
+            <button class="btn-continue" onclick="goToStep(2, 40)">QUERO DESCOBRIR COMO &rarr;</button>
         </div>
 
         <!-- PASSO 2 -->
         <div class="step-content" id="step2">
             <h1>Prazer, eu sou a Paula Maia ❤️</h1>
             <img src="paula-familia.jpg" alt="Paula Maia com sua família" class="step-image">
-            <p>Sou especialista em sono infantil e mãe de três filhos. Há pouco tempo, eu também vivia o desespero de um bebê que acordava a toda hora e a exaustão de passar noites em claro.</p>
-            <p>Criei o método <strong>Durma + Sem Choro!</strong> para provar que é possível ter noites tranquilas sem precisar de deixar o bebê chorando sozinho.</p>
-            <p style="background: var(--purple-light); padding: 12px 15px; border-radius: 12px; border: 1px dashed var(--purple-accent); font-weight: 500; font-size: 0.9rem; text-align: center; margin-top: 15px;">
-                📝 Para começarmos, responda a algumas perguntas rápidas nas próximas telas para receber um <strong>diagnóstico completo</strong> e personalizado do sono do seu bebê.
-            </p>
-            <button class="btn-continue" onclick="goToStep(3, 14)">RESPONDER PERGUNTAS &rarr;</button>
+            <p>Sou especialista em sono infantil e mãe de três filhos. Eu já passei pelas mesmas noites em claro e pelo mesmo cansaço que você sente hoje.</p>
+            <p>Criei o método <strong>Durma + Sem Choro!</strong> para te mostrar que é possível ter noites tranquilas sem precisar deixar o seu bebê chorando sozinho.</p>
+            <button class="btn-continue" onclick="goToStep(3, 60)">INICIAR DIAGNÓSTICO RÁPIDO &rarr;</button>
         </div>
 
         <!-- PASSO 3 -->
         <div class="step-content" id="step3">
-            <h1>Qual é a idade aproximada do seu pequeno?</h1>
-            <p>Isto ajuda a identificar a fase de desenvolvimento e as janelas de sono adequadas:</p>
+            <h1>Qual é a idade do seu pequeno?</h1>
+            <p>Isso nos ajuda a entender a fase de desenvolvimento e o sono dele:</p>
             <div class="options-list">
-                <div class="option-card" onclick="goToStep(4, 21)">👶 De 0 a 3 meses (Recém-nascido)</div>
-                <div class="option-card" onclick="goToStep(4, 21)">👶 De 4 a 8 meses (Fase de saltos e regressões)</div>
-                <div class="option-card" onclick="goToStep(4, 21)">🧒 De 9 a 12 meses (Apego e energia intensa)</div>
-                <div class="option-card" onclick="goToStep(4, 21)">🧒 De 1 a 2 anos (Birras e despertares noturnos)</div>
+                <div class="option-card" onclick="goToStep(4, 80)">👶 De 0 a 3 meses (Recém-nascido)</div>
+                <div class="option-card" onclick="goToStep(4, 80)">👶 De 4 a 8 meses (Fase de saltos e desenvolvimento)</div>
+                <div class="option-card" onclick="goToStep(4, 80)">🧒 De 9 a 12 meses (Apego e despertares)</div>
+                <div class="option-card" onclick="goToStep(4, 80)">🧒 De 1 a 2 anos (Birras e noites difíceis)</div>
             </div>
         </div>
 
         <!-- PASSO 4 -->
         <div class="step-content" id="step4">
-            <h1>Como o seu bebê costuma adormecer?</h1>
-            <p>(Este é o fator número um que afeta as madrugadas da família inteira...)</p>
+            <h1>Como o seu bebê costuma pegar no sono?</h1>
+            <p>(Esse é o detalhe que mais interfere nas madrugadas da família...)</p>
             <div class="options-list">
-                <div class="option-card" onclick="goToStep(5, 28)">🛑 Apenas no colo ou balançando</div>
-                <div class="option-card" onclick="goToStep(5, 28)">🛑 Mamando no peito ou na mamadeira</div>
-                <div class="option-card" onclick="goToStep(5, 28)">⚠ No berço, mas acorda assim que sai do lugar</div>
-                <div class="option-card" onclick="goToStep(5, 28)">✅ Adormece sozinho com facilidade</div>
+                <div class="option-card" onclick="goToStep(5, 100)">🛑 Apenas no colo ou balançando</div>
+                <div class="option-card" onclick="goToStep(5, 100)">🛑 Mamando no peito ou na mamadeira</div>
+                <div class="option-card" onclick="goToStep(5, 100)">⚠ No berço, mas acorda assim que sai do braço</div>
+                <div class="option-card" onclick="goToStep(5, 100)">✅ Adormece sozinho com facilidade</div>
             </div>
         </div>
 
-        <!-- PASSO 5 -->
+        <!-- PASSO 5: Página de Vendas Final com Prova Social e FAQ Expandido -->
         <div class="step-content" id="step5">
-            <h1>A história da Mariana e do pequeno Lucas</h1>
-            <img src="berco-quarto.jpg" alt="Quarto de bebê" class="step-image">
-            <p>"Eu já não sabia o que era dormir mais de duas horas seguidas. O Lucas só pegava no sono no meu colo e chorava sempre que eu tentava passá-lo para o berço.</p>
-            <p>Quando conheci o método da Paula, percebi que pequenas mudanças mudavam tudo. Na primeira semana, ele já dormia no berço e eu voltei a ter paz!"</p>
-            <button class="btn-continue" onclick="goToStep(6, 35)">CONTINUAR &rarr;</button>
-        </div>
-
-        <!-- PASSO 6 -->
-        <div class="step-content" id="step6">
-            <h1>Qual é o momento do dia em que você se sente mais esgotada ou sem paciência?</h1>
-            <p>Seja sincera, reconhecer o tamanho do cansaço é o primeiro passo para a mudança:</p>
-            <div class="options-list">
-                <div class="option-card" onclick="goToStep(7, 42)">⚡ No final do dia, quando ele chora e eu já não tenho energia para nada.</div>
-                <div class="option-card" onclick="goToStep(7, 42)">🌙 Durante a madrugada, quando ele acorda pela milésima vez e meu corpo pesa.</div>
-                <div class="option-card" onclick="goToStep(7, 42)">🌀 O dia todo, vivo em piloto automático e me sinto culpada por perder a paciência.</div>
-            </div>
-        </div>
-
-        <!-- PASSO 7 -->
-        <div class="step-content" id="step7">
-            <h1>O que mais te machuca ao tentar fazer seu bebê dormir hoje?</h1>
-            <p>Essa frustração diária drena todas as suas energias:</p>
-            <div class="options-list">
-                <div class="option-card" onclick="goToStep(8, 50)">💔 Ver que ele chora desesperado no meu colo e eu não sei o que fazer.</div>
-                <div class="option-card" onclick="goToStep(8, 50)">🔄 Passar horas embalando e, assim que o coloco no berço, ele acorda de novo.</div>
-                <div class="option-card" onclick="goToStep(8, 50)">🛑 Sentir que já tentei de tudo (livros, dicas da internet) e nada funcionou.</div>
-            </div>
-        </div>
-
-        <!-- PASSO 8 -->
-        <div class="step-content" id="step8">
-            <h1>Veja o depoimento real da Ana Paula</h1>
-            <div class="step-video-box">
-                <div class="step-video-screen">
-                    <video controls preload="metadata" poster="miniatura1.jpg">
-                        <source src="Depoimento1.mp4" type="video/mp4">
-                        O seu navegador não suporta vídeo.
-                    </video>
-                </div>
-            </div>
-            <p style="text-align: center; font-size: 0.9rem; color: var(--purple-hover);">Mãe da Manu e do Henrique recuperou as noites de sono.</p>
-            <button class="btn-continue" onclick="goToStep(9, 58)">CONTINUAR &rarr;</button>
-        </div>
-
-        <!-- PASSO 9 -->
-        <div class="step-content" id="step9">
-            <h1>Além das noites mal dormidas, o que a falta de sono do seu bebê mais tem tirado de você?</h1>
-            <p>O impacto vai muito além das horas sem dormir:</p>
-            <div class="options-list">
-                <div class="option-card" onclick="goToStep(10, 65)">⚠️ Minha paciência e meu bem-estar emocional durante o dia.</div>
-                <div class="option-card" onclick="goToStep(10, 65)">❤️ Os momentos a dois com meu parceiro(a) e meu próprio tempo de descanso.</div>
-                <div class="option-card" onclick="goToStep(10, 65)">🎯 Minha produtividade, foco e autoestima pessoal.</div>
-            </div>
-        </div>
-
-        <!-- PASSO 10 -->
-        <div class="step-content" id="step10">
-            <h1>Por que o sono de qualidade é vital para o desenvolvimento do seu bebê?</h1>
-            <img src="missao-bebe.jpg" alt="Bebê dormindo" class="step-image">
-            <p>Enquanto o seu bebê dorme profundamente, o cérebro dele processa tudo o que aprendeu, o sistema imunológico se fortalece e o hormônio do crescimento atua com força total.</p>
-            <p>Bebês que dormem bem choram menos, ganham mais disposição para explorar o mundo e se desenvolvem com muita saúde emocional.</p>
-            <button class="btn-continue" onclick="goToStep(11, 72)">CONTINUAR &rarr;</button>
-        </div>
-
-        <!-- PASSO 11 -->
-        <div class="step-content" id="step11">
-            <h1>Você se sentiria mais segura e confiante se pudesse tirar suas dúvidas direto com a especialista?</h1>
-            <p>Ter um suporte humano para guiar os seus passos faz toda a diferença para não se sentir sozinha no processo:</p>
-            <div class="options-list">
-                <div class="option-card" onclick="goToStep(12, 80)">✨ Sim! É exatamente o que preciso para ter segurança.</div>
-                <div class="option-card" onclick="goToStep(12, 80)">🤝 Com certeza, ajudaria muito a não errar sozinha.</div>
-            </div>
-        </div>
-
-        <!-- PASSO 12 -->
-        <div class="step-content" id="step12">
-            <h1>O seu plano personalizado está pronto! 🎯</h1>
-            <img src="oferta-berco.jpg" alt="Aulas" class="step-image">
-            <p>Para liberarmos o seu diagnóstico completo e a condição especial de acesso, preencha abaixo os seus dados:</p>
-            
-            <form id="leadForm" onsubmit="enviarLeadParaWeb3Forms(event)">
-                <input type="hidden" name="access_key" value="f1f33e3c-240f-41e8-90ae-79a78f98bbaa">
-                <input type="hidden" name="subject" value="Novo Lead Cadastrado - Do Colo ao Berço!">
-                
-                <div class="form-group">
-                    <label for="nomeMae">O seu Nome:</label>
-                    <input type="text" id="nomeMae" name="Nome" class="form-input" placeholder="Ex: Mariana Silva" required>
-                </div>
-                <div class="form-group">
-                    <label for="emailMae">O seu E-mail:</label>
-                    <input type="email" id="emailMae" name="Email" class="form-input" placeholder="seu-melhor-email@exemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="whatsappMae">O seu WhatsApp (com DDD):</label>
-                    <input type="tel" id="whatsappMae" name="WhatsApp" class="form-input" placeholder="Ex: 32991396972" required>
-                    <div id="erroWhatsapp" class="error-msg">Número inválido! Digite o DDD + seu WhatsApp real (mínimo 10 dígitos, sem repetir o mesmo número).</div>
-                </div>
-                <button type="submit" id="btnEnviar" class="btn-continue">VER MEU DIAGNÓSTICO E OFERTA &rarr;</button>
-            </form>
-        </div>
-
-        <!-- PASSO 13 -->
-        <div class="step-content" id="step13">
             <div style="background: var(--purple-light); padding: 12px 15px; border-radius: 12px; border: 2px solid var(--purple-accent); margin-bottom: 20px; text-align: center;">
-                <span style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--purple-hover); display: block; margin-bottom: 2px;">Minicurso Prático Oficial</span>
+                <span style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--purple-hover); display: block; margin-bottom: 2px;">Diagnóstico Concluído</span>
                 <h2 style="font-size: 1.3rem; color: var(--title-color); margin: 0;">Do Colo ao Berço &bull; Método Durma + sem Choro!</h2>
             </div>
 
-            <h1>Chega de Madrugadas em Claro e Exaustão Extrema</h1>
+            <h1>O Seu Diagnóstico: É Hora de Descansar</h1>
             
-            <p>Nós sabemos exatamente o peso que você carrega nos ombros. O corpo dormente de cansaço, a irritação por falta de descanso, a culpa por perder a paciência e a sensação de falhar como mãe. <strong>A culpa não é sua!</strong> Sem o método certo, tentar adormecer um bebê viciado em colo e peito é esgotante.</p>
+            <p>Pelas suas respostas, o seu bebê precisa de ajuda para aprender a adormecer sem depender exclusivamente do colo ou do peito. Quando ajustamos isso com carinho, as noites voltam a ter paz. <strong>Você merece descansar.</strong></p>
             
             <div class="checklist-box">
                 <h3>📚 O QUE VOCÊ VAI RECEBER NO MINICURSO:</h3>
                 <ul>
-                    <li>✔️ <strong>Aulas 01 e 02:</strong> Entendendo o sono do bebê + Preparando o ambiente e a rotina ideal.</li>
-                    <li>✔️ <strong>Aulas 03 e 04:</strong> O Método Durma + sem choro passo a passo (tirando a associação de mamar/colo e ensinando a dormir no berço).</li>
-                    <li>✔️ <strong>Aulas 05 e 06:</strong> Consolidando hábitos, lidando com retrocessos e colocando o bebê no berço do jeito certo.</li>
+                    <li>✔ <strong>Aulas 01 e 02:</strong> Entendendo o sono do bebê + Preparando o ambiente e a rotina ideal.</li>
+                    <li>✔️ <strong>Aulas 03 e 04:</strong> O Método Durma + sem choro passo a passo (removendo o colo/peito com carinho).</li>
+                    <li>✔ <strong>Aulas 05 e 06:</strong> Consolidando hábitos, lidando com retrocessos e colocando no berço com segurança.</li>
                     <li>🎁 <strong>BÔNUS 1:</strong> Tabela Oficial de Janela de Sono por idade.</li>
                     <li>🎁 <strong>BÔNUS 2:</strong> Guia prático de Quantidade de Sonecas.</li>
-                    <li>💬 <strong>BÔNUS 3: Acesso ao Grupo de Apoio no WhatsApp</strong> para tirar dúvidas e caminhar junto com outras mães e suporte especializado!</li>
-                    <li>⚡ <strong>Acesso Vitalício</strong> à plataforma para assistir quando e quantas quiser.</li>
+                    <li>💬 <strong>BÔNUS 3: Acesso ao Grupo de Apoio no WhatsApp</strong> com suporte especializado!</li>
+                    <li>⚡ <strong>Acesso Vitalício</strong> à plataforma.</li>
                 </ul>
             </div>
 
@@ -567,10 +415,20 @@
                 💬 Ficou com dúvida? Fale comigo no WhatsApp
             </a>
 
-            <!-- MAIS DEPOIMENTOS -->
-            <h3 style="font-size: 1.15rem; margin: 30px 0 15px 0; color: var(--title-color);">Mais Mães que Transformaram a Rotina:</h3>
+            <!-- PROVA SOCIAL: VÍDEOS E DEPOIMENTOS ESCRITOS -->
+            <h3 style="font-size: 1.15rem; margin: 35px 0 15px 0; color: var(--title-color);">Histórias Reais de Mães que Conquistaram o Sono:</h3>
 
-            <div class="step-video-box" style="margin-bottom: 15px;">
+            <div class="step-video-box">
+                <div class="step-video-screen">
+                    <video controls preload="metadata" poster="miniatura1.jpg">
+                        <source src="Depoimento1.mp4" type="video/mp4">
+                        O seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 0.85rem; color: var(--purple-hover); margin-bottom: 20px;">Ana Paula — Mãe da Manu e do Henrique</p>
+
+            <div class="step-video-box">
                 <div class="step-video-screen">
                     <video controls preload="metadata" poster="miniatura2.jpg">
                         <source src="Depoimento2.mp4" type="video/mp4">
@@ -578,7 +436,7 @@
                     </video>
                 </div>
             </div>
-            <p style="text-align: center; font-size: 0.85rem; color: var(--purple-hover); margin-bottom: 20px;">Depoimento real de mãe que aplicou o método da Paula.</p>
+            <p style="text-align: center; font-size: 0.85rem; color: var(--purple-hover); margin-bottom: 25px;">Depoimento real de mãe aluna do método.</p>
 
             <div class="testimonial-mini-card">
                 <p>"Passar as madrugadas em claro embalando já era rotina aqui em casa. As aulas são super diretas e práticas, sem enrolação para quem já está exausta."</p>
@@ -593,16 +451,11 @@
             <!-- GARANTIA -->
             <div style="background: #faf5fc; padding: 16px; border-radius: 14px; border: 1px solid var(--border-color); margin: 25px 0; text-align: center;">
                 <h3 style="font-size: 1rem; color: var(--title-color); margin-bottom: 6px;">🔒 Garantia Incondicional de 7 Dias</h3>
-                <p style="font-size: 0.85rem; margin: 0; text-align: center;">Teste o método sem compromisso. Se não ver diferença na rotina da sua casa, devolvemos 100% do seu dinheiro sem burocracia.</p>
+                <p style="font-size: 0.85rem; margin: 0; text-align: center;">Teste o método sem compromisso. Se não ver diferença na rotina da sua casa, devolvemos 100% do seu dinheiro.</p>
             </div>
 
-            <!-- FAQ COMPLETA -->
+            <!-- FAQ EXPANDIDO -->
             <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--title-color);">Dúvidas Frequentes</h3>
-
-            <div class="faq-item">
-                <strong>Como recebo o acesso ao curso e ao grupo do WhatsApp?</strong>
-                <p>O acesso às aulas é 100% imediato após a aprovação do pagamento via e-mail da Kiwify. O link para entrar no grupo do WhatsApp estará disponível logo dentro da plataforma de aulas.</p>
-            </div>
 
             <div class="faq-item">
                 <strong>O curso serve para qual idade?</strong>
@@ -611,12 +464,32 @@
 
             <div class="faq-item">
                 <strong>O método deixa o bebê chorando sozinho?</strong>
-                <p>De forma alguma! É um método totalmente acolhedor baseado na neurociência, respeitando o vínculo entre mãe e bebê.</p>
+                <p>De forma alguma! É um método acolhedor baseado na neurociência, respeitando o vínculo entre mãe e bebê.</p>
             </div>
 
             <div class="faq-item">
-                <strong>Por quanto tempo terei acesso?</strong>
-                <p>O acesso é vitalício. Você poderá ver e rever as aulas sempre que precisar.</p>
+                <strong>Como recebo o acesso ao curso?</strong>
+                <p>Assim que o pagamento é aprovado, você recebe um e-mail automático da Kiwify com seus dados de acesso imediato.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Por quanto tempo terei acesso às aulas?</strong>
+                <p>O acesso é vitalício! Você pode assistir e rever os módulos sempre que precisar, acompanhando o crescimento do seu bebê.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>O meu bebê mama no peito para dormir, o método funciona para nós?</strong>
+                <p>Sim! Mostramos exatamente como desassociar o peito do sono de forma gradual e amorosa, sem cortar a amamentação.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Não tenho muito tempo livre. As aulas são muito longas?</strong>
+                <p>De jeito nenhum. As aulas são diretas, curtas e práticas, criadas especialmente para mães que estão exaustas e sem tempo a perder.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>Como funciona o suporte com a Paula?</strong>
+                <p>Além das aulas gravadas, você terá acesso direto ao nosso grupo de apoio no WhatsApp para tirar dúvidas e caminhar acompanhada.</p>
             </div>
 
             <a href="https://pay.kiwify.com.br/GRBixhq" target="_blank" class="btn-continue" style="background: linear-gradient(135deg, #7562dc 0%, #513fc4 100%); margin-top: 25px;">QUERO GARANTIR MEU ACESSO COM DESCONTO</a>
@@ -629,7 +502,6 @@
 
     <script>
         function goToStep(stepNum, progressPercentage) {
-            // Pausa e reinicia todos os vídeos da página ao mudar de passo
             document.querySelectorAll('video').forEach(video => {
                 video.pause();
                 video.currentTime = 0;
@@ -640,54 +512,12 @@
             document.getElementById('funnelProgress').style.width = progressPercentage + '%';
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Rastreamento automático individual por cada passo no Meta Pixel
             if (typeof fbq === 'function') {
                 fbq('trackCustom', 'Passo_' + stepNum);
-                if (stepNum === 13) {
+                if (stepNum === 5) {
                     fbq('track', 'Lead');
                 }
             }
-        }
-
-        // Validação estrita e definitiva de telefone para evitar cliques de teste inúteis
-        function enviarLeadParaWeb3Forms(event) {
-            event.preventDefault();
-            
-            const inputWhatsapp = document.getElementById('whatsappMae');
-            const erroWhatsapp = document.getElementById('erroWhatsapp');
-            const numerosApenas = inputWhatsapp.value.replace(/\D/g, ''); // Remove tudo que não for número
-
-            const todosIguais = /^(\d)\1+$/.test(numerosApenas);
-            const sequenciaObvia = /^(12345678|01234567|98765432)/.test(numerosApenas);
-
-            if (numerosApenas.length < 10 || numerosApenas.length > 11 || todosIguais || sequenciaObvia) {
-                erroWhatsapp.style.display = 'block';
-                inputWhatsapp.style.borderColor = '#d9534f';
-                inputWhatsapp.focus();
-                return;
-            } else {
-                erroWhatsapp.style.display = 'none';
-                inputWhatsapp.style.borderColor = 'var(--border-color)';
-            }
-
-            const form = document.getElementById('leadForm');
-            const formData = new FormData(form);
-            const botao = document.getElementById('btnEnviar');
-            
-            botao.innerText = "A carregar diagnóstico...";
-            botao.disabled = true;
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                goToStep(13, 90);
-            })
-            .catch(error => {
-                goToStep(13, 90);
-            });
         }
     </script>
 </body>
